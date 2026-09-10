@@ -1,0 +1,15 @@
+{
+  "model": "unsloth/Qwen3-4B-unsloth-bnb-4bit",
+  "framework": "Unsloth",
+  "method": "4-bit QLoRA",
+  "training_steps": 100,
+  "validation_examples": 1034,
+  "sql_syntax_validity_percent": 100.0,
+  "sql_only_format_compliance_percent": 100.0,
+  "normalized_exact_match_percent": 39.4584,
+  "average_generated_tokens": 29.9894,
+  "peak_gpu_memory_gb": 6.4559,
+  "evaluation_minutes": 29.3082,
+  "base_normalized_exact_match_percent": 22.63,
+  "exact_match_change_percentage_points": 16.8284
+}

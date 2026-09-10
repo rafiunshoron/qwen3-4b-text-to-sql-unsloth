@@ -1,0 +1,13 @@
+{
+  "model": "unsloth/Qwen3-4B-unsloth-bnb-4bit",
+  "framework": "Unsloth",
+  "method": "4-bit QLoRA",
+  "training_steps": 100,
+  "effective_batch_size": 8,
+  "trainable_parameters": 33030144,
+  "training_minutes": 18.15,
+  "peak_gpu_memory_gb": 4.77,
+  "train_loss": 0.40030657112598417,
+  "train_samples_per_second": 0.736,
+  "train_steps_per_second": 0.092
+}

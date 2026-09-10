@@ -1,0 +1,60 @@
+{
+  "project_name": "Qwen3-4B Text-to-SQL Fine-Tuning with Unsloth",
+  "task": "Schema-aware natural-language to SQLite generation",
+  "base_model": "unsloth/Qwen3-4B-unsloth-bnb-4bit",
+  "dataset": "hujudev/spider-text-2-sql",
+  "framework": "Unsloth",
+  "training_method": "4-bit QLoRA",
+  "hardware": {
+    "platform": "Kaggle",
+    "gpu": "Tesla T4",
+    "visible_gpu_count": 1,
+    "gpu_memory_gb": 14.56,
+    "precision": "FP16"
+  },
+  "dataset_statistics": {
+    "training_examples_after_deduplication": 8651,
+    "overlength_training_examples_removed": 96,
+    "final_training_examples": 8555,
+    "validation_examples": 1034,
+    "train_validation_database_overlap": 0
+  },
+  "lora_configuration": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0,
+    "trainable_parameters": 33030144,
+    "trainable_percentage": 0.81,
+    "base_model_frozen": true
+  },
+  "training_configuration": {
+    "steps": 100,
+    "effective_batch_size": 8,
+    "approximate_sequences_processed": 800,
+    "learning_rate": 0.0002,
+    "optimizer": "adamw_8bit",
+    "maximum_sequence_length": 2048,
+    "response_only_training": true,
+    "training_minutes": 18.15,
+    "peak_gpu_memory_gb": 4.77,
+    "average_training_loss": 0.40030657112598417,
+    "final_logged_loss": 0.208128
+  },
+  "base_model_evaluation": {
+    "sql_syntax_validity_percent": 99.61,
+    "sql_only_format_compliance_percent": 99.71,
+    "normalized_exact_match_percent": 22.63,
+    "evaluation_minutes": 28.86
+  },
+  "finetuned_model_evaluation": {
+    "sql_syntax_validity_percent": 100.0,
+    "sql_only_format_compliance_percent": 100.0,
+    "normalized_exact_match_percent": 39.46,
+    "evaluation_minutes": 29.31
+  },
+  "improvement": {
+    "normalized_exact_match_percentage_points": 16.83,
+    "normalized_exact_match_relative_percent": 74.4
+  },
+  "evaluation_note": "Normalized exact match is a strict structural metric. It may mark semantically equivalent SQL queries as different."
+}

@@ -1,0 +1,4 @@
+Metric,Base model,Fine-tuned model,Change (percentage points)
+SQL syntax validity (%),99.61,100.0,0.39
+SQL-only format compliance (%),99.71,100.0,0.29
+Normalized exact match (%),22.63,39.46,16.83
